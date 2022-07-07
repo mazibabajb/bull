@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url({% static '/assets/img/slide/slide-1.jpeg)' %};">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Welcome to <span>BraveBull Forex</span></h2>
+              <p>"International Traders / Expert Traders / Market Analysts📈📊 Track your favorite Pairs and get real time daily updates."
+</p>
+              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url({% static '/assets/img/slide/slide-2.jpeg)' %};">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Mission & Vision</h2>
+              <p>Time to say good-bye to the major hedge funds which always had the resources to make expert trades however leaving everyone else at a risk of losing or rather at a great disadvantage.We can now refer to this an history however, because BraveBull Forex has turned tables and all changed.We have managed to change this due to our so clear mission which is to provide convenience and peace of mind to our prospects.From beginners to experts. Cutting down on losses, generating trade ideas, and alerting you of news that impacts the market, our platform puts it all at your fingertips..</p>
+              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url({% static '/assets/img/slide/slide-3.jpeg)' %};">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Core Values</h2>
+              <p>Through our Transperancy,Professionalism, Integrity We are able to offer all our prospects the ability to never be caught off guard again when there are changes and volatility in the markets.</p>
+              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Our <strong>SetUps</strong></h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-ForeCast">ForeCast</li>
+              <li data-filter=".filter-Execution">Execution</li>
+              <li data-filter=".filter-Results">Results</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ForeCast">
+            <img src="{% static '/assets/img/portfolio/portfolio-2.jpeg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>ForeCast 1</h4>
+              <p>ForeCast</p>
+              <a href="{% static '/assets/img/portfolio/portfolio-2.jpeg' %}"data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="ForeCast 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Results">
+            <img src="{% static '/assets/img/portfolio/portfolio-2.jpeg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Results 3</h4>
+              <p>Results</p>
+              <a href="{% static '/assets/img/portfolio/portfolio-2.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Results 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+         
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Execution">
+            <img src="{% static '/assets/img/portfolio/portfolio-4.jpeg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Execution 2</h4>
+              <p>Execution</p>
+              <a href="{% static '/assets/img/portfolio/portfolio-4.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Execution 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+         
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock content %}
