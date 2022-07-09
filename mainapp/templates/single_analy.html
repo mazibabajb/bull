@@ -10,11 +10,11 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Blog Single</h2>
+          <h2>Analysis detail</h2>
           <ol>
-            <li><a href="{%  url 'home' %}">Home</a></li>
-            <li><a href="{%  url 'blog' %}">Blog</a></li>
-            <li>Blog Single</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li>Analysis detail</li>
           </ol>
         </div>
 
@@ -32,15 +32,15 @@
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}" class="img-fluid">
+                <img src="{{ post.signal_thumbnail.url }}" alt="{{ post.title }}" class="img-fluid">
               </div>
 
               <h2 class="entry-title">{{ post.title }}</h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="">natemuko</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href=""><time datetime="2020-01-01">{{ post.date }}</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ post.name }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{ post.posted_on }}</time></a></li>
                 </ul>
               </div>
 
@@ -49,7 +49,7 @@
 
                 <blockquote>
                   <p>
-                    {{  post.content}}
+                    {{  post.signal_description}}
                   </p>
                 </blockquote>
 
@@ -146,38 +146,6 @@
           </div><!-- End blog entries list -->
 
           <div class="col-lg-4">
-
-            <div class="sidebar">
-
-              <h3 class="sidebar-title">Search</h3>
-              <div class="sidebar-item search-form">
-                <form action="">
-                  <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-              </div><!-- End sidebar search formn-->
-
-              <h3 class="sidebar-title">Categories</h3>
-              <div class="sidebar-item categories">
-                <ul>
-                  {% for cat in blog_cat %}
-                  <li><a href="{% url 'blog' %}?cat={{ cat.name}}">{{ cat.name }}<span></span></a></li>
-                  
-                {% endfor %}        
-                   
-                </ul>
-              </div><!-- End sidebar categories-->
-
-              <h3 class="sidebar-title">Recent Posts</h3>
-              <div class="sidebar-item recent-posts">
-                {% for trens in recent_blog %}
-                <div class="post-item clearfix">
-                  <img src="{{ trens.thumbnail.url }}" alt="">
-                  <h4><a href="blog-single.html">{{ trens.title }}</a></h4>
-                  <time datetime="2020-01-01">{{ trens.date }}</time>
-                </div>
-                {% endfor %}
-              </div><!-- End sidebar recent posts-->
 
             </div><!-- End sidebar -->
 

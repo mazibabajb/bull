@@ -28,7 +28,7 @@
 
           <div class="col-lg-8 entries">
 
-            {% for p in post %}
+            {% for p in posts %}
 
             <article class="entry">
 
@@ -49,10 +49,11 @@
 
               <div class="entry-content">
                 <p>
-                     {{   p.post_description }}
+                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                  Et eveniet enim. Qui velit est ea dolorem doloremque del. Voluptate porro consequatur assumenda perferendis dolore.
                 </p>
                 <div class="read-more">
-                  <a href="{% url 'post_detail'  p.id %}">Read More</a>
+                  <a href="blog-single.html">Read More</a>
                 </div>
               </div>
 
@@ -99,30 +100,6 @@
                   <button type="submit"><i class="bi bi-search"></i></button>
                 </form>
               </div><!-- End sidebar search formn-->
-
-              <h3 class="sidebar-title">Categories</h3>
-              <div class="sidebar-item categories">
-                <ul>
-                  {% for cat in blog_cat %}
-                  <li><a href="{% url 'blog' %}?cat={{ cat.name}}">{{ cat.name }}<span></span></a></li>
-                  
-                {% endfor %}        
-                   
-                </ul>
-              </div><!-- End sidebar categories-->
-
-              <h3 class="sidebar-title">Recent Posts</h3>
-              <div class="sidebar-item recent-posts">
-                {% for trens in recent_blog %}
-                <div class="post-item clearfix">
-                  <img src="{{ trens.thumbnail.url }}" alt="">
-                  <h4><a href="blog-single.html">{{ trens.title }}</a></h4>
-                  <time datetime="2020-01-01">{{ trens.date }}</time>
-                </div>
-                {% endfor %}
-              </div><!-- End sidebar recent posts-->
-
-
             </div><!-- End sidebar -->
 
           </div><!-- End blog sidebar -->
